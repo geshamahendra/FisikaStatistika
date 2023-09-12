@@ -1,0 +1,193 @@
+\title{\centering\Large{{\textbf{Jawaban}}}}\\\\
+\textbf{Tugas 1}
+\begin{enumerate}
+    \item 
+    \begin{enumerate}[(a)]
+        \item 
+        Probabilitas langkah $n_1$ ke kanan dan $n_2=N-n_1$ kekiri:
+        \begin{equation*}
+            W(n_1)=\dfrac{N!}{n_1!(N-n_1)!}p^{n_1}q^{N-n1}
+        \end{equation*}
+        Sehingga didapatkan persamaan binomial
+        \begin{equation*}
+            \sum_{n_1=0}^N W(n_1)=(p+q)^N =1
+        \end{equation*}
+        Untuk setiap fungsi $f(n_1)$ didapatkan
+        \begin{equation*}
+            \begin{split}
+                \overline{f(n_1)}&=\dfrac{\sum_{n_1=0}^N W(n_1)f(n_1)}{\sum_{n_1=0}^N W(n_1)}\\
+                &=\sum_{n_1=0}^N f(n_1)W(n_1)
+            \end{split}
+        \end{equation*}
+        Dengan perpindahan rata-rata dari $m$:
+        \begin{equation*}
+            \begin{split}
+                \overline{m}&=\overline{n_1-n_2}\\
+                &=\sum_{n_1=0}^N (n_1-n_2)W(n_1)\\
+                &=\sum_{n_1=0}^N\left(p\dfrac{\partial}{\partial p} -q \dfrac{\partial}{\partial q}\right)W(n_1)\\
+                &=\left(p\dfrac{\partial}{\partial p} -q \dfrac{\partial}{\partial q}\right)\sum_{n_1=0}^N W(n_1)\\
+                &=\left(p\dfrac{\partial}{\partial p} -q \dfrac{\partial}{\partial q}\right)(p+q)^N
+            \end{split}
+        \end{equation*}
+        Dengan nilai $p=q=\dfrac{1}{2}$
+        \begin{equation*}
+            \begin{split}
+                \overline{m}&=pN(p+q)^{N-1}-qN(p+q)^{N-1}\\
+                &=N(p+q)^{N-1}(p-q)\\
+                &=0
+            \end{split}
+        \end{equation*}
+        Untuk mencari nilai rata-rata $m^2$ yang memiliki kemiripan dengan nilai $m$:
+        \begin{equation*}
+            \begin{split}
+                \overline{m^2}&=\overline{(n_1-n_2)^2}\\
+                &=\sum_{n_1=0}^N (n_1-n_2)^2 W(n_1)\\
+                &=\sum_{n_1=0}^N \left(p\dfrac{\partial}{\partial p}-q \dfrac{\partial}{\partial q}\right)^2 W(n_1)\\
+                &=\left(p\dfrac{\partial}{\partial p}-q \dfrac{\partial}{\partial q}\right)^2 \sum_{n_1=0}^N W(n_1)\\
+                &=\left(p\dfrac{\partial}{\partial p} -q \dfrac{\partial}{\partial q}\right)(N(p+q)^{N-2}(p-q))
+            \end{split}
+        \end{equation*}
+        Dengan nilai $p=q=\dfrac{1}{2}$
+        \begin{equation*}
+            \begin{split}
+                \overline{m^2}&=pN(p+q)^{N-1}+pN(N-1)(p+q)^{N-2}(p-q)\\
+                &\;\;\;\;-qN(N-1)(p+1)^{N-2}(p-q)+qN(p+q)^{N-1}\\
+                &=N(p+q)^N+N(N-1)(p+q)^{N-2}(p-q)^2\\
+                &=N\sum_{n_1=0}^N W(N_1)+N(N-1)(p+q)^{N-2}(p-q)^2\\
+                &=N 
+            \end{split}
+        \end{equation*}
+        \item Hitung rata-rata $\overline{m^3}$ dan $\overline{m^4}$.
+        Mencari nilai $\overline{m^3}$
+        \begin{equation*}
+            \begin{split}
+                \overline{m^3}&=\overline{(n_1-n_2)^3}\\
+                &=\sum_{n_1=0}^N(n_1-n_2)^3W(n_1)\\
+                &=\sum_{n_1=0}^N\left(p\dfrac{\partial}{\partial p}-q\dfrac{\partial}{\partial q}\right)^3W(n_1)\\
+                &=\left(p\dfrac{\partial}{\partial p}-q\dfrac{\partial}{\partial q}\right)\overline{m^2}\\
+                &=\left(p\dfrac{\partial}{\partial p}-q\dfrac{\partial}{\partial q}\right)\sum W(n_1)+N(N-1)(p+q)^N-2(p-q)^2\\
+                &=N^2(p+q)^{N-1}(p-q)+N(N-1)(N-2)(p+q)^{N-3}(p-q)^3\\
+                &\;\;\;+2N(N-1)(p+q)^{N-1}(p-q)\\
+                &=\left[N+2(N-1)\overline{m}\right]+N(N-1)(N-2)(p+q)^{N-3}(p-q)^3\\
+                &=\left[3N-2\overline{m}\right]+N(N-1)(N-2)(p+q)^{N-3}(p-q)^3
+            \end{split}
+        \end{equation*}
+        Kemudian dengan p=q=$\dfrac{1}{2}$ maka didapat,
+        \begin{equation*}
+            \overline{m^3}=0
+        \end{equation*}
+        Sehingga nilai $\overline{m^4}$ didapat dengan:
+        \begin{equation*}
+            \begin{split}
+                \overline{m^4}&=\sum_{n_1=0}^N (n_1-n_2)^4 W(n_1)\\
+                &=\sum_{n_1=0}^N \left(p\dfrac{\partial}{\partial p}-q\dfrac{\partial}{\partial q}\right)^4 W(n_1)\\
+                &=\left(p\dfrac{\partial}{\partial p}-q\dfrac{\partial}{\partial q}\right)\overline{m^3}\\
+                &=\left(p\dfrac{\partial}{\partial p}-q\dfrac{\partial}{\partial q}\right)\left[3N-2\right]\overline{m}+N(N-1)(N-2)(p+q)^{N-3}(p-q)^3\\
+                &=(3N-2)\overline{m^2}+3N(N-1)(N-2)(p+q)^{N-2}(p-q)^2\\
+                &\;\;\;+N(N-1)(N-2)(N-3)(p+q)^{N-4}(p-q)^4
+            \end{split}
+        \end{equation*}
+        dengan 
+            \begin{equation*}
+                N(N-1)(p+q)^{N-2}(p-q)^2=\overline{m^2}-N\sum W(n_1)
+            \end{equation*}
+        maka,
+        \begin{equation*}
+            \overline{m^4}=(6N-8)\overline{m^2}-(3N-6)N\sum W(n_1)+N(N-1)(N-2)(N-3)(p+q)^{N-4}(p-q)^4
+        \end{equation*}
+        Dengan nilai $p=q=\dfrac{1}{2}$ maka,
+        \begin{equation*}
+            \overline{m^4}=(3N-2)N
+        \end{equation*}
+    \end{enumerate}
+    \item Dengan
+    \begin{equation*}
+        W(n)=\dfrac{N!}{n!(N-n)!}p^n(1-p)^{N-n}
+    \end{equation*}
+    \begin{enumerate}[(a)]
+        \item Jika $\ln(1-p)\approx-p$. Tunjukkan $(1-p)^{N-n}$\\
+        \begin{itemize}
+            \item Dengan $n\ll N$ sehingga $N-n\approx N$
+            \begin{equation*}
+                (1-p)^{N-n}=(1-p)^N
+            \end{equation*}
+            \item Kemudian meninjau ruas kanan
+            \begin{equation*}
+                e^{(-Np)}
+            \end{equation*}
+        \end{itemize}
+        Sehingga didapat:
+        \begin{equation*}
+        	\begin{split}
+            (1-p)^N &\approx e^{(-Np)}\\
+            \ln(1-p)^N &\approx \ln e^{(-Np)}\\
+            N\ln(1-p) &\approx-Np
+        	\end{split}
+        \end{equation*}
+        Dan dengan $\ln(1-p)\approx -p$, maka
+        \begin{equation*}
+            -Np\approx-Np
+        \end{equation*}
+        \begin{center}
+            Q.E.D.
+        \end{center}
+        \item Tunjukkan bahwa $\dfrac{N!}{(N-n)!}\approx N^n$
+        \begin{equation*}
+            \begin{split}
+                \dfrac{N!}{(N-n)!}&=\dfrac{N\times\cdots\times 3\times 2\times 1}{(N-n)\times\cdots\times 3\times2 \times 1}\\
+                &=(N-n+1)\times (N-n+2)\times\cdots\times N
+            \end{split}
+        \end{equation*}
+        Dengan $n\ll N$, sehingga:
+        \begin{equation*}
+            \begin{split}
+                \dfrac{N!}{(N-n)!}&=(N-n+1)\times (N-n+2)\times\cdots\times N\\
+            &=N^n+n^n+\cdots+(1^n-1)\\
+            &=N^n
+            \end{split}
+        \end{equation*}
+        \item Tunjukkan bahwa $W(n)=\dfrac{\lambda^n}{(n!)e^{-\lambda}}$ dengan $\lambda=Np$ dikenal sebagai distribusi Poisson.\\\\
+        Dengan definisi distribusi Binomial
+        \begin{equation*}
+            \begin{split}
+                W(n)&=\dfrac{N!}{n!(N-n)!}p^n(1-p)^{N-n}\\
+                &=\dfrac{N(N-1)\cdots(N-n+1)}{n!}p^n(1-p)^{N-n}\\
+                &=\dfrac{N^n\left(1-\dfrac{1}{N}\right)\left(1-\dfrac{2}{N}\right)\cdots\left(1-\dfrac{n-1}{N}\right)}{n!(N-n)!}p^n(1-p)^{N-n}\\
+                &=\dfrac{\left(1-\dfrac{1}{N}\right)\left(1-\dfrac{2}{N}\right)\cdots\left(1-\dfrac{n-1}{N}\right)}{n!(N-n)!}(Np)^n\left(1-\dfrac{Np}{N}\right)
+            \end{split}
+        \end{equation*}
+        Ketika nilai $p\gg$ dan $N\ll$, maka:
+        \begin{equation*}
+            W(n)=e^{-Np}\dfrac{(Np)^n}{n!}
+        \end{equation*}
+        Dengan $\lambda=Np$ yang merupakan definisi distribusi Poisson, maka:
+        \begin{equation*}
+            W(n)=e^{-\lambda}\dfrac{\lambda^n}{n!}
+        \end{equation*}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}[(a)]
+        \item Mengambil batas distribusi binomial
+        \begin{equation*}
+            \begin{split}
+                \sum W_n&=\sum \dfrac{\lambda^ne^{-\lambda}}{n!}\\
+                &=e^{-\lambda} \sum \dfrac{\lambda^n}{n!}\\
+                &=e^{-\lambda}e^{\lambda}\\
+                &=1\;\;\;\text{terbukti}
+            \end{split}
+        \end{equation*}
+        \item Distribusi poisson berasal dari distribusi binomial
+        \begin{equation*}
+            \bar{n}=np
+        \end{equation*}
+        \item 
+        \begin{equation*}
+            \begin{split}
+                \bar{\Delta n^2}&=\bar{n-\bar{n}}^2\\
+                &=\bar{n-np}^2\\
+                &=\bar{n^2(1-p)^2}\\
+                &=\sum_{n=0^N} n^2(1-p)^2W(n)
+            \end{split}
+        \end{equation*}
+    \end{enumerate}
+\end{enumerate}

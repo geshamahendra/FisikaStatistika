@@ -1,0 +1,42 @@
+\documentclass[12 pt]{article}
+\usepackage{inputenc, amsmath, mathtools, xfrac, amssymb, graphicx, subfloat, IEEEtrantools, ulem, chngcntr, bm, enumerate}
+
+\usepackage[letterpaper,margin=2.5cm]{geometry} % set the page parameters suitably
+\setlength{\parskip}{0pt}
+\counterwithin*{equation}{section}
+
+\author{Gesha Mahendra Cunyadha - 1906348214}
+\date{TA 2021-2022 Semester 5}
+\title{Tugas Mandiri-Fisika Statistik}
+
+\makeatletter 
+\renewcommand{\thefigure}{\@arabic\c@figure}
+\makeatother
+
+\newcommand{\dbar}{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}}
+
+\usepackage[belowskip=1pt,aboveskip=0pt]{caption}%====
+\captionsetup[figure]{name=Gambar}%===================== Mengatur jarak section & subsection
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}%========
+
+\begin{document}
+    \begin{titlepage}
+        \begin{figure}
+            \begin{center}
+                \includegraphics[width=2.5cm]{pic/makara.png}
+            \end{center}
+        \end{figure}  
+        \maketitle
+        \thispagestyle{empty}
+    \end{titlepage}
+
+    \pagenumbering{arabic}
+
+    \include{soal}
+    \include{jawaban1}
+    \include{jawaban2}
+    \include{jawaban3}
+    \include{jawaban4}
+    \include{jawaban5}
+    
+\end{document}

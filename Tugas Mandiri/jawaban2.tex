@@ -1,0 +1,149 @@
+\textbf{Tugas 2}
+\begin{enumerate}
+    \item Hamiltonian: $H(x,p)=\dfrac{p^2}{2m}+\dfrac{1}{2}kx^2=E$
+    \begin{equation*}
+        \begin{split}
+            \rightarrow\;H(0,p)&=\dfrac{p^2}{2m}=E\\
+            p&=\sqrt{2mE}\\
+            H(L,p)&=\dfrac{p^2}{2m}+\dfrac{1}{2}kL^2=E\\
+            p&=\sqrt{\dfrac{2mE}{p^2+mkL^2}}
+        \end{split}
+    \end{equation*}
+    dengan 1 dimensi $\rightarrow$ 1N
+    \begin{equation*}
+        \begin{split}
+            \Delta\omega&=\int_{E\ll H\ll E\delta E} dxdx=\int_{E\ll H\ll E\delta E} d\omega\\
+            \omega&=\int_{E\ll H\ll E\delta E}L\,dp\\
+            &=\int_{\sqrt{2mE}}^{\sqrt{\sfrac{2mE}{p^2+mkL^2}}}Ldp\\
+            &=L\left(\sqrt{2mE}\right)\left(\dfrac{1-\sqrt{p^2+mkL^2}}{\sqrt{p^2+mkL^2}}\right)
+        \end{split}
+    \end{equation*}
+    \item 
+    \begin{enumerate}[(a)]
+        \item dengan probabilitas ensembel
+        \begin{equation*}
+            P(x)dx=\sum\dfrac{W(\varphi) d\varphi}{\sfrac{dx}{d\varphi}}
+        \end{equation*}
+        dengan persamaan gemolmbang osilator harmonik
+        \begin{equation*}
+            \dfrac{dx}{d\varphi}=A\sin(\omega t+\varphi)
+        \end{equation*}
+        maka,
+        \begin{equation*}
+            \omega=(\varphi)d\varphi=\dfrac{d\varphi}{2\pi}
+        \end{equation*}
+        sehingga didapatkan,
+        \begin{equation*}
+            \begin{split}
+                P(x)dx&=\sum\dfrac{W(\varphi) d\varphi}{\sfrac{dx}{d\varphi}}\\
+                &=\dfrac{2dx}{2\pi A\sin(\omega t+\varphi)}\\
+                &=\dfrac{1}{\pi\sqrt{A^2-x^2}}dx
+            \end{split}
+        \end{equation*}
+        \item Dengan
+        \begin{equation*}
+            \begin{split}
+                x&=A\cos(\omega t+\varphi)\\
+                \dfrac{dx}{d\varphi}&=A\sin(\omega t+\varphi)
+            \end{split}
+        \end{equation*}
+        dan dengan
+        \begin{equation*}
+            \omega(\varphi)\,d\varphi=(2\pi)^{-1}\,d\varphi
+        \end{equation*}
+        Sehingga didapatkan
+        \begin{equation*}
+            \begin{split}
+                p(x)dx&=\dfrac{2\,dx}{2\pi A\sin(\omega t+\varphi)}\\
+                &=\dfrac{1}{\pi\sqrt{A^2-x^2}}\,dx
+            \end{split}
+        \end{equation*}
+        \item Energi sebagai fungsi dari amplitudo
+        \begin{equation*}
+            \begin{split}
+                E&=\dfrac{p^2}{2m}+\dfrac{kx^2}{2}\\
+                &=\dfrac{kA^2}{2}
+            \end{split}
+        \end{equation*}
+        Dengan kontur energi pada fase ruang sebanding dengan elips.\\
+        Dengan transformasi
+        \begin{equation*}
+            p\prime^2=\dfrac{p^2}{mk}
+        \end{equation*}
+        maka didapat lingkaran sebagai kontur energi, sehingga:
+        \begin{equation*}
+            \rightarrow A^2=x^2+p\prime^2 
+        \end{equation*}
+        dengan fase ruang volume berada diandata $E$ dan $E+\delta E$ yang direpresentasikan dengan luas $a$ diantara $A$ dan $A+\delta A$ dimana $\delta A$ merupakan fungsi
+        \begin{equation*}
+            \omega(A)\delta A=2\pi A\delta A
+        \end{equation*}
+        Untuk menemukan dimana bagian dari ruang fase diantara $x$ dan $dx$, gunakan koordinat polar
+        \begin{equation*}
+            \begin{split}
+                \cos\theta&=\dfrac{x}{A}\\
+                d\theta&=\dfrac{dx}{A\sin\theta}=\dfrac{dx}{\sqrt{A^2-x^2}}
+            \end{split}
+        \end{equation*}
+        Sehingga area diantara dua bagian antara $x$ dan $dx$ adalah
+        \begin{equation*}
+            \begin{split}
+                \omega(x,A)\,dx\delta A&=2A\,d\theta\delta A\\
+                &=\dfrac{2A\,dx\delta A}{\sqrt{A^2-x^2}}
+            \end{split}
+        \end{equation*}
+        dan probabilitasnya dalah
+        \begin{equation*}
+            \begin{split}
+                P(x)dx&=\dfrac{\omega(x,A)dx\delta A}{\omega(A)\delta A}\\
+                &=\dfrac{dx}{\pi\sqrt{A^2-x^2}}
+            \end{split}
+        \end{equation*}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}[(a)]
+        \item 
+        \begin{equation*}
+            \begin{split}
+                F&=F(x,y)\\
+                dF&=\dfrac{\partial F}{\partial x}\,dy+\dfrac{\partial F}{\partial y}\,dy\\
+                \leadsto&\,\,dF=A\,dx+B\,dy
+            \end{split}
+        \end{equation*}
+        dengan
+        \begin{equation*}
+            A=\dfrac{\partial F}{\partial x}
+        \end{equation*}
+        maka, 
+        \begin{equation*}
+            \dfrac{\partial A}{\partial y}=\dfrac{\partial^2 F}{\partial x\partial y}
+        \end{equation*}
+        dan 
+        \begin{equation*}
+            B=\dfrac{\partial F}{\partial y}
+        \end{equation*}
+        maka,
+        \begin{equation*}
+            \dfrac{\partial B}{\partial x}=\dfrac{\partial^2 F}{\partial x\partial y}
+        \end{equation*}
+        sehingga 
+        \begin{equation*}
+            \dfrac{\partial A}{\partial y}=\dfrac{\partial B}{\partial x}
+        \end{equation*}
+        \item 
+        \begin{equation*}
+            \begin{split}
+                \int_A^B \,dF&=F(B)-F(A)\\
+                &=F(x_N,y_N)- F(x_0,y_0)
+            \end{split}
+        \end{equation*}
+        Lintasan tertutup, maka $X_N\rightarrow X_0$ dan $y_N\rightarrow y_0$
+        \begin{equation*}
+            \begin{split}
+                \oint\,df&=\int_A^B\,dF\\
+                &=F(x_0,y_0)- F(x_0,y_0)\\
+                &=0
+            \end{split}
+        \end{equation*}
+    \end{enumerate}
+\end{enumerate}

@@ -1,0 +1,106 @@
+\textbf{Tugas 5}
+\begin{enumerate}
+    \item 
+    \begin{enumerate}[(a)]
+        \item Dari teorema equipartisi didapatkan
+        \begin{equation*}
+            \begin{split}
+                \langle EK \rangle&=\dfrac{1}{2}mv_x ^2+\dfrac{1}{2}mv_y ^2+\dfrac{1}{2}mv_z ^2\\
+                &=\dfrac{3}{2}k_BT
+            \end{split}
+        \end{equation*}
+        \item Energi potensial rata-rata partikel
+        \begin{equation*}
+            \langle EP \rangle =\int_0^L\dfrac{mgze^{-\sfrac{mgz}{k_BT}}dz}{e^{-\sfrac{mgz}{k_BT}}dz}=\dfrac{I_N}{I_D}
+        \end{equation*}
+        dengan
+        \begin{equation*}
+            \begin{split}
+                \rightarrow I_D&=\int_0^L e^{-\dfrac{mgz}{k_BT}}dz=\int_0^L e^{-\alpha z}dz=\left(\dfrac{1-e^{-\alpha z}}{\alpha}\right)\\
+                \rightarrow I_N&=\int_0^L (mgz)e^{-\sfrac{mgz}{k_BT}}dz=mg\int_0^L ze^{-\sfrac{mgz}{k_BT}}dz\\
+                &=-mh\dfrac{\partial I_D}{\partial \alpha}=\dfrac{mg}{\alpha}\left[\dfrac{1-e^{-\alpha L}}{\alpha}-Le^{-\alpha L}\right]
+            \end{split}
+        \end{equation*}
+        Sehingga didapatkan:
+        \begin{equation*}
+            \begin{split}
+                \langle EK \rangle&=\dfrac{I_N}{I_D}=mg\left[\dfrac{1}{\alpha}-Le^{-\alpha L}\right]\\
+                &=mg\left[\dfrac{k_BT}{mg}-
+                \dfrac{L}{e^{\sfrac{mgL}{k_BT}}-1}\right]
+            \end{split}
+        \end{equation*}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}[(a)]
+        \item 
+            \begin{equation*}
+            \bar{p_f}=\bar{p_1}+\bar{p_2}
+            \end{equation*}
+    \item Volume fasa ruang
+    \begin{equation*}
+        \Omega(E)=\dfrac{1}{N_1!N_2!}\dfrac{1}{h^{3N}}\int dq\int\prod_{i=1}^{3N_1}dp_i\int\prod_{j=1}^{3N_2}dp_j \theta(E-H(p_i,q_j))
+    \end{equation*}
+    Transformasi momentum
+    \begin{equation*}
+        \begin{split}
+            P_1&\rightarrow P_i=\dfrac{P_i}{\sqrt{2m_1}}\leadsto dp_i=\sqrt{2m_1}\,dp_i\\
+            P_2&\rightarrow P_j=\dfrac{P_j}{\sqrt{2m_2}}\leadsto dp_j=\sqrt{2m_2}\,dp_j
+        \end{split}
+    \end{equation*}
+    maka,
+    \begin{equation*}
+        \begin{split}
+            \Omega&=\dfrac{V^N(2m_1)^{\sfrac{3N_1}{2}}(2m_2)^{\sfrac{3N_2}{2}}}{h^{3N}N_1!N_2!}\int\prod_{i=1}^{3N}\,dp_i\theta\left(E-\sum_{i=1}^{3N}p_i ^2\right)\\
+            &=\dfrac{V^N(2m_1)^{\sfrac{3N_1}{2}}(2m_2)^{\sfrac{3N_2}{2}}}{h^{3N}N_1!N_2!}\dfrac{\pi^{\sfrac{3N_1}{2}}E^{\sfrac{3N_1}{2}}}{\left(\dfrac{3N}{2}\right)!}
+        \end{split}
+    \end{equation*}
+    dengan faktor massa reduksi $\mu=\dfrac{m_1m_2}{m_1+m_2}$
+    \begin{equation*}
+        \Omega=\dfrac{V^N\pi^{\sfrac{3N_1}{2}}(2\mu E)^{\sfrac{3N_2}{2}}}{h^{3N}N_1!\left(\dfrac{3N}{2}\right)!}\dfrac{N!}{N_1!N_2!}\left(\dfrac{m_1}{\mu}\right)^{\sfrac{3N_1}{2}}\left(\dfrac{m_2}{\mu}\right)^{\sfrac{3N_1}{2}}
+    \end{equation*}
+    Entropinya:
+    \begin{equation*}
+        \begin{split}
+            S&=k_B\ln\Omega\\
+            &=k_B\left[\ln\Omega_{\text{individu}}+\ln\Omega_{\text{campuran}}\right]\\
+            &=S_{\text{individu}}+S_{\text{campuran}}
+        \end{split}
+    \end{equation*}
+    maka:
+    \begin{equation*}
+        \dfrac{S_{\text{individu}}}{Nk_B}=\ln\left[\dfrac{V}{N}\left(\dfrac{4\pi\mu E}{3h^2N}\right)^{\sfrac{3}{2}}\right]+\dfrac{5}{2}
+    \end{equation*}
+    Untuk gas 1 dengan massa tereduksi
+    \begin{equation*}
+        \dfrac{S_{N_1}}{N_1k_B}=\ln\left[\dfrac{V}{N}\left(\dfrac{4\pi m_1 E}{3h^2N}\right)^{\sfrac{3}{2}}\right]+\dfrac{5}{2}+\ln\left(\dfrac{m_1}{\mu}^{\sfrac{3}{2}}\right)
+    \end{equation*}
+    Untuk gas 2
+    \begin{equation*}
+        \dfrac{S_{N_1}}{N_1k_B}=\ln\left[\dfrac{V}{N}\left(\dfrac{4\pi m_2 E}{3h^2N}\right)^{\sfrac{3}{2}}\right]+\dfrac{5}{2}+\ln\left(\dfrac{m_2}{\mu}^{\sfrac{3}{2}}\right)
+    \end{equation*}
+    Dan $\Delta S$ Entropinya
+    \begin{equation*}
+        \begin{split}
+            \Delta S&=S_{\text{individu}}+S_{\text{campuran}}-S_{N_1}-S_{N_2}\\
+            \dfrac{\Delta S}{k_B}&=-N_1\ln\dfrac{N_1}{N}-N_2\ln\dfrac{N_2}{N}
+        \end{split}
+    \end{equation*}
+    \end{enumerate}
+    \item $PV=nRT$ dapat ditulis $P=\dfrac{\rho}{\mu}RT$ dengan $\mu$ adalah berat molekul\\
+    Dengan kesetimbangan hidrostatis: $\dfrac{dP}{dt}=-q\rho$, sehingga
+    \begin{equation*}
+        \begin{split}
+            \dfrac{dP}{dz}=-\dfrac{q\mu}{RT}P\\
+            \rightarrow \dfrac{dP}{P}=-\dfrac{g\mu}{RT}dz
+        \end{split}
+    \end{equation*}
+    sehingga:
+    \begin{equation*}
+        \begin{split}
+            \ln P&=-\dfrac{\mu g}{RT}z\\
+            \rightarrow \ln P&=P_0 e^{-\dfrac{g\mu}{RT}z}\\
+            \ln P+z\dfrac{g\mu}{RT}&=0\rightarrow \dfrac{dN(z)}{dz}=\dfrac{\mu g}{RT}\\
+            \ln P+z\dfrac{g\mu}{RT}&=N(z)+z\dfrac{dN(z)}{dz}
+        \end{split}
+    \end{equation*}
+\end{enumerate}

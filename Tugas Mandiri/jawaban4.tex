@@ -1,0 +1,60 @@
+\textbf{Tugas 4}
+\begin{enumerate}
+    \item \begin{enumerate}[(a)]
+        \item 
+        \begin{equation*}
+            \dfrac{P_1}{P_2}=\dfrac{e^{-\beta E_1}}{e^{-\beta E_0}}=\dfrac{e^{-\beta(1+\sfrac{1}{2})\hbar\omega}}{e^-\beta(0+\sfrac{1}{2})\hbar\omega}
+        \end{equation*}
+        \item 
+        \begin{equation*}
+            \begin{split}
+                \bar{E}&=\dfrac{\sum_re^{-\beta E_r}E_r}{\sum_r e^{-\beta E_r}}=\dfrac{E_oe^{-\beta E_o}+E_1e^{-\beta E_1}}{e^{-\beta E_o}+e^{-\beta E_1}}\\
+                &=\hbar\omega\dfrac{\dfrac{1}{2}+\dfrac{3}{2}\dfrac{P_1}{P_0}}{1+\dfrac{P_1}{P_0}}=\dfrac{\hbar\omega}{2}\dfrac{1+3e^{-\beta\hbar\omega}}{1+e^{-\beta\hbar\omega}}
+            \end{split}
+        \end{equation*}
+    \end{enumerate}
+    \item Melabeli proton dengan indeks $i$, dengan $i$ berjalan dari 1 ke $N$, dan spin proton bernilai $s_i\mu$. Dengan energi state $\sum_i(-s_i\mu H)$, maka fungsi partisinya adalah
+    \begin{equation*}
+        Z(T)=\sum_{s_1,\cdots,s_N} e^{\sfrac{1}{kT}\sum_i s_i\mu H}
+    \end{equation*}
+    dimana
+    \begin{equation*}
+        \begin{split}
+            Z(T)&=(Z_1(T))^N\\
+            Z_1(T)&=e^{-\sfrac{\mu H}{kT}}+e^{\sfrac{\mu H}{kT}}
+        \end{split}
+    \end{equation*}
+    Energi internal dari sampel $U=-\sum_i s_i\mu H$ sebanding dengan perbedaan populasi. Sehingga didapat:
+    \begin{equation*}
+        U=kT^2 \dfrac{\partial}{\partial T} \log(Z(T))
+    \end{equation*}
+    sehingga didapat
+    \begin{equation*}
+    	U=kT^2N\dfrac{e^{+\sfrac{\mu H}{kT}}-e^{-\sfrac{\mu H}{kT}}}{e^{+\sfrac{\mu H}{kT}}+e^{-\sfrac{\mu H}{kT}}}\left(\dfrac{-\mu H}{kT^2}\right)
+    \end{equation*}
+    Dimana ketika $\mu H\ll kT$ mengganti eksponen dengan $e^x=1+x$ sehingga didapatkan
+    \begin{equation*}
+        \begin{split}
+            U&\approx-N\mu H\dfrac{+\sfrac{\mu H}{kT}-\left(\sfrac{\mu H}{kT}\right)}{2}\\
+            &=-N\dfrac{\mu^2H^2}{kT}
+        \end{split}
+    \end{equation*}
+    dan daya berbanding terbalik dengan $T$
+    \item $PV=nRT$ dapat ditulis $P=\dfrac{\rho}{\mu}RT$ dengan $\mu$ adalah berat molekul\\
+    Dengan kesetimbangan hidrostatis: $\dfrac{dP}{dt}=-q\rho$, sehingga
+    \begin{equation*}
+        \begin{split}
+            \dfrac{dP}{dz}=-\dfrac{q\mu}{RT}P\\
+            \rightarrow \dfrac{dP}{P}=-\dfrac{g\mu}{RT}dz
+        \end{split}
+    \end{equation*}
+    sehingga:
+    \begin{equation*}
+        \begin{split}
+            \ln P&=-\dfrac{\mu g}{RT}z\\
+            \rightarrow \ln P&=P_0 e^{-\dfrac{g\mu}{RT}z}\\
+            \ln P+z\dfrac{g\mu}{RT}&=0\rightarrow \dfrac{dN(z)}{dz}=\dfrac{\mu g}{RT}\\
+            \ln P+z\dfrac{g\mu}{RT}&=N(z)+z\dfrac{dN(z)}{dz}
+        \end{split}
+    \end{equation*}
+\end{enumerate}
